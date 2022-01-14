@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <input type="text" id="textArea" autofocus oninput="updateGrid(this.value)">
+    <input type="text" id="textArea" autofocus oninput="updateGrid(this.value)" autocomplete="off">
     <div class="grid" id="grid" onclick="$('textArea').focus();"></div>
     <div class="discovered" id="discovered"></div>
     <script src="script.js" defer></script>
