@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Hunt</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <input type="text" id="textArea" autofocus oninput="updateGrid(this.value)">
+    <div class="grid" id="grid" onclick="$('textArea').focus();"></div>
+    <div class="discovered" id="discovered"></div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

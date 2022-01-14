@@ -1,0 +1,81 @@
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: Helvetica;
+}
+
+.grid {
+  display: grid;
+  float: left;
+  grid-template-columns: repeat(auto-fit, 20%);
+  gap: 5px;
+  /* margin: auto; */
+  width: 70vmin;
+  padding-top: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.square {
+  background: rgb(19, 19, 19);
+  border-radius: 20%;
+  font-weight: bold;
+  font-size: 5vh;
+
+  /* keep square */
+  aspect-ratio: 1;
+
+  /* center items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square.highlighted {
+  border-style: solid;
+  border-color: #ffffff;
+  background-color: #000000;
+}
+
+.square.highlighted.first {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+input {
+  left: -1000px;
+  position: absolute;
+}
+
+.discovered {
+  font-size: 2vw;
+  float: left;
+  margin-top: 3%;
+  font-weight: 600;
+  overflow-y: scroll;
+  height: 92vh;
+  overflow-x: hidden;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.discovered::-webkit-scrollbar {
+  display: none;
+}
+
+.word {
+  margin-bottom: 10%;
+  border-radius: 50px;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-style: solid;
+  padding: 6%;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.focused {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
