@@ -41,8 +41,6 @@ function updateGrid(value) {
 
   if (value.length === gridSize * gridSize) {
     searchAll();
-    // searchSpecific("AWAITS");
-
     // print all found words in order of decreasing length
     wordsFound.sort((a, b) => b.word.length - a.word.length);
 
@@ -51,9 +49,6 @@ function updateGrid(value) {
       return index === 0 || word.word !== wordsFound[index - 1].word;
     });
 
-    for (var i = 0; i < wordsFound.length; i++) {
-      console.log(wordsFound[i]);
-    }
     createWordElements();
   }
 }
@@ -89,10 +84,6 @@ class Word {
       squareElement.classList.remove("highlighted");
       squareElement.classList.remove("first");
     }
-
-    // // remove svg elements
-    // const svg = document.getElementById("svg" + this.word);
-    // svg.parentNode.removeChild(svg);
   }
 }
 
